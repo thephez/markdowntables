@@ -65,7 +65,7 @@ function process_table(){
 		
 		// only add row if it has data
 		if(curr_row_cell_count){
-			table_rows += '|' + table_row + '\n'
+			table_rows += '| ' + table_row.trim() + '\n'
             prev_row_cell_count = curr_row_cell_count;
 		}
 	});	
