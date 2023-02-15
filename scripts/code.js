@@ -53,7 +53,7 @@ function process_table(){
         var curr_row_cell_count = 0;
 		$(this).find('td').not('thead > tr > td').each(function() {
                 curr_row_cell_count++;
-				table_row = table_row + fixText($(this).text()) + '|';
+				table_row = table_row + fixText($(this).text()) + '| ';
 		});
         
         //Check that the number of cells match in all the rows
