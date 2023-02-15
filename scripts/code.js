@@ -22,7 +22,7 @@ function process_table(){
 	// set the strings to hold the data
 	var markdown_string = '';
 	var table_header = '| ';
-	var table_header_footer = '|';
+	var table_header_footer = '| ';
 	var table_rows = '';
 	var table_header_found = false;
     var table_header_cell_count = 0;
@@ -32,7 +32,7 @@ function process_table(){
 	$(html).find('thead > tr > td').each(function() {
         table_header_cell_count++;
         table_header = table_header + fixText($(this).text()) + ' | ';
-        table_header_footer = table_header_footer + '--- |';
+        table_header_footer = table_header_footer + ' --- |';
         table_header_found = true;
 	});
 	
@@ -43,7 +43,7 @@ function process_table(){
             $(this).find('th').each(function() {
                 table_header_cell_count++;
                 table_header = table_header + fixText($(this).text()) + ' | ';
-                table_header_footer = table_header_footer + '--- |';
+                table_header_footer = table_header_footer + ' --- |';
                 table_header_found = true;
             });
         }
@@ -84,7 +84,7 @@ function process_table(){
             //It it's missing, add an empty header, since most of the Markdown processors can't render a table without a header
             for(var i=0; i<prev_row_cell_count; i++) {
                 table_header = table_header + '|';
-                table_header_footer = table_header_footer + '--- |';
+                table_header_footer = table_header_footer + ' --- |';
             }
         }
         
