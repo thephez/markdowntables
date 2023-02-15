@@ -22,7 +22,7 @@ function process_table(){
 	// set the strings to hold the data
 	var markdown_string = '';
 	var table_header = '| ';
-	var table_header_footer = '| ';
+	var table_header_footer = '|';
 	var table_rows = '';
 	var table_header_found = false;
     var table_header_cell_count = 0;
